@@ -69,3 +69,27 @@ consumer.apply(ExampleMiddleware).forRoutes('users');
 }
 
 ``
+
+### Lesson 6 Pipes & Transformer
+
+two usecases
+Transformation:
+
+- Transform properties (Strings-> Int, ...)
+
+Validation:
+
+- check req body
+
+useful to guarantee certain types.
+
+create new Pipe with cli tool
+
+`validateCreateUser`
+
+This pipe is added to the controller function
+
+`createUser(@Body(ValidateCreateUserPipe) userData: CreateUserDto)`
+
+idea:
+maybe useful for specific DateTime Format etc.
