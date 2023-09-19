@@ -22,3 +22,18 @@ decorators are prededefined functions.
 @Controller
 
 When dealing with data its handy to use DTO's to define what data is send to controller.
+
+## Lesson 2 Validation
+
+<a href="https://docs.nestjs.com/techniques/validation">Nest Docs</a>
+
+### Validate Values in Body:
+
+`yarn add class-validator class-transformer`
+
+- use decorator from class Validator inside DTO to ensure validation
+- add Validation Pipe to Controller `@UsePipes(new ValidationPipe())`
+
+### Validate Data type in Param:
+
+@Param('id', ParseIntPipe)
