@@ -70,7 +70,7 @@ consumer.apply(ExampleMiddleware).forRoutes('users');
 
 ``
 
-### Lesson 6 Pipes & Transformer
+## Lesson 6 Pipes & Transformer
 
 two usecases
 Transformation:
@@ -93,3 +93,14 @@ This pipe is added to the controller function
 
 idea:
 maybe useful for specific DateTime Format etc.
+
+## Lesson 7 Guards
+
+a class with the responsibility to decide if the incoming req can be handled by the controller.
+
+authentication, authorisation(roles, etc)
+
+`nest g guard /users/guards/Auth `
+
+add the annotation to the controller or function
+`@UseGuards(AuthGuard)`
