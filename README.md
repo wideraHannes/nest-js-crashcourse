@@ -37,3 +37,18 @@ When dealing with data its handy to use DTO's to define what data is send to con
 ### Validate Data type in Param:
 
 @Param('id', ParseIntPipe)
+
+## Lesson 3 Services & Providers
+
+Providers are injected.
+Nestjs uses Dependency Injection.
+
+### Services
+
+Take care of the Business Logic.
+Seperation of Concerns.
+`nest generate service /users/services/users` or
+`nest g s /users/services/users`
+
+every provider has @Injectable() Decorator.
+This means Nest is able to do dependency injection
