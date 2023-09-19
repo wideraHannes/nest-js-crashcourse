@@ -43,7 +43,7 @@ When dealing with data its handy to use DTO's to define what data is send to con
 Providers are injected.
 Nestjs uses Dependency Injection.
 
-### Services
+### Lesson 4 Services
 
 Take care of the Business Logic.
 Seperation of Concerns.
@@ -52,3 +52,20 @@ Seperation of Concerns.
 
 every provider has @Injectable() Decorator.
 This means Nest is able to do dependency injection
+
+### Lesson 5 Middleware
+
+Run before Controller.
+Has access to Request and Response.
+
+`nest generate middleware`
+
+special way to register. Add as _Consumer_
+``
+export class UsersModule implements NestModule {
+configure(consumer: MiddlewareConsumer) {
+consumer.apply(ExampleMiddleware).forRoutes('users');
+}
+}
+
+``
